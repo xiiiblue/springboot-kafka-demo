@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: cerberus-sample-consumer
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    template:
+      default-topic: test
+    consumer:
+      auto-offset-reset: earliest
+      group-id: test
+      enable-auto-commit: true
+    producer:
+      batch-size: 16384
+      buffer-memory: 33554432
+logging:
+  level:
+    root: INFO
